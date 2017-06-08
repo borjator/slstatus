@@ -39,8 +39,10 @@
 - wifi_perc (wifi signal in percent) [argument: wifi card interface name]
 - wifi_essid (wifi essid) [argument: wifi card interface name] */
 static const struct arg args[] = {
-	/* function	format        argument */
-	{ cpu_perc, "[CPU %4s] ", NULL },
-	{ ram_perc, "[RAM %3s] ", NULL },
-	{ datetime, "[ %s ]",     "%F %T" },
+	/* function	format         argument */
+	{ cpu_perc, "  CPU: %3s ", NULL },
+	{ ram_perc, "| RAM: %3s ", NULL },
+	{ load_avg, "| Load: %s ", NULL },
+	{ vol_perc, "| Vol: %s ",  "/dev/mixer" },
+	{ datetime, "| %s ",       "%F %H:%M" },
 };
